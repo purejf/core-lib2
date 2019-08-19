@@ -1,0 +1,6 @@
+use_frameworks!
+target 'core-lib2_Tests' do
+  pod 'core-lib2', :path => '../'
+  
+  
+end
