@@ -31,7 +31,11 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '8.0'
     
     s.source_files = 'core-lib2/Classes/**/*'
-    
+    s.pod_target_xcconfig = {
+        'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}"/**',
+        'ENABLE_BITCODE'         => 'NO',
+        'SWIFT_VERSION' => '4.0'
+    }
     s.resource_bundles = {
         'core-lib2' => ['core-lib2/Assets/*.png']
     }
